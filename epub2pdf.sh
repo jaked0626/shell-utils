@@ -66,7 +66,7 @@ fi
 echo "Converting epub files to PDF..."
 for file in "${epub_files[@]}"; do
   output_file="${file%.*}.pdf"
-  pandoc "$file" -o "$output_file"
+  pandoc -f epub "$file" -o "$output_file"
   if [ -e "$output_file" ]; then
     echo -e "$file \n \t -> $output_file"
   fi
