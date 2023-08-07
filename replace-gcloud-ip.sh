@@ -19,6 +19,6 @@ if ! grep -q "Host work-gcloud" $CONFIG_FILE; then
 fi
 
 # Replace the IP address
-gsed -i "s/\(HostName \).*/\1$IP_ADDRESS/" $CONFIG_FILE
+gsed -E -i '/Host work-gcloud/{N; s/(Host work-gcloud\n  HostName ).*/\1'$IP_ADDRESS'/}' $CONFIG_FILE
 
 echo "Success: IP address updated in $CONFIG_FILE"
