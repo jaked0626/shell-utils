@@ -8,14 +8,15 @@
 
 # Steps
 
-1. from project root, run
+1. Configure .bigqueryrc 
+2. from project root, run
 ```bash
 $ bash ./scripts/setenv.sh
 ```
 
-2. populate templates with your queries. 
+3. populate templates with your queries. 
 
-3. from project root, run 
+4. from project root, run 
 ```bash
 $ ./scripts/runquery.sh ./templates/[templateName].sql
 ```
