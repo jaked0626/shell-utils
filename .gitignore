@@ -1,2 +1,4 @@
 # hide sensitive work stuff
 *opt*
+
+*.DS_Store
